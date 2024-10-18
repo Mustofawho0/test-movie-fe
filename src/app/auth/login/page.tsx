@@ -13,9 +13,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuthLogin } from '@/api/useAuthLogin';
 
-export const description =
-  "A simple login form with username and password. The submit button says 'Sign in'.";
-
 export default function LoginForm() {
   const { handleAuth } = useAuthLogin();
   const [username, setUsername] = React.useState('');
