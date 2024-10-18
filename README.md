@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## API SUPPORT
+
+The Movie Databases (TMBD)[https://www.themoviedb.org/]
+
 ## Getting Started
 
 First, run the development server:
@@ -13,6 +17,40 @@ pnpm dev
 # or
 bun dev
 ```
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Mustofawho0/my-porto-v2.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd your-repo-name
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+## Tech Stack
+
+- NextJS @latest
+- Tailwind CSS
+- Axios
+- Antd
+- Sweetalert2
+- React-Slick
+- Shadcn/ui
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
