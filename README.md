@@ -23,7 +23,7 @@ bun dev
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Mustofawho0/my-porto-v2.git
+git clone https://github.com/Mustofawho0/test-movie-fe.git
 ```
 
 2. Navigate to the project directory:
