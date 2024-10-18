@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## API SUPPORT
 
-The Movie Databases (TMBD)[https://www.themoviedb.org/]
+The Movie Databases [https://www.themoviedb.org/](TMBD)
 
 ## Getting Started
 
