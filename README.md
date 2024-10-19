@@ -52,13 +52,11 @@ pnpm install
 
 ## Tech Stack
 
-- NextJS @latest
-- Tailwind CSS
-- Axios
-- Antd
-- Sweetalert2
-- React-Slick
-- Shadcn/ui
+- React Framework : NextJS @latest
+- UI Design : Tailwind CSS
+- Database : The Movie Database
+- Languages : Typescript
+- Add Library : Axios, Antd, Licide-react, Shadcn/ui, React-slick, Sweetalert2
 
 ## Learn More
 

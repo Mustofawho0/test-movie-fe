@@ -56,32 +56,40 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='px-[200px] p-4 border-b border-gray-400 gap-4 rounded-b-2xl shadow-lg'>
-      <div className='flex items-center justify-between'>
+    <nav className='px-4 md:px-[100px] xl:px-[200px] p-4 border-b border-gray-400 gap-4 rounded-b-2xl shadow-lg'>
+      <div className='flex flex-col md:flex-row items-center justify-between'>
         <Link href={'/'}>
-          <span className='text-2xl tracking-wide flex items-center gap-2'>
+          <span className='text-xl md:text-2xl tracking-wide flex items-center gap-2'>
             Move-Movie <FilmIcon />
           </span>
         </Link>
-        <div className='flex gap-4 items-center'>
+        <div className='flex gap-2 md:gap-4 items-center mt-4 md:mt-0'>
           {username ? (
             <>
               <Link href={'/profile'}>
-                <p>welcome, {username}!</p>
+                <p className='text-sm md:text-base'>Welcome, {username}!</p>
               </Link>
-              <Button onClick={handleLogout}>Logout</Button>
+              <Button className='text-sm md:text-base' onClick={handleLogout}>
+                Logout
+              </Button>
             </>
           ) : guest === true ? (
             <>
-              <p>welcome, Guest!</p>
-              <Button onClick={handleLogout}>Logout</Button>
+              <p className='text-sm md:text-base'>Welcome, Guest!</p>
+              <Button className='text-sm md:text-base' onClick={handleLogout}>
+                Logout
+              </Button>
             </>
           ) : (
             <>
               <Link href={'/auth/login'}>
-                <Button>Login</Button>
+                <Button className='text-sm md:text-base'>Login</Button>
               </Link>
-              <Button variant='outline' onClick={handleGuest}>
+              <Button
+                variant='outline'
+                className='text-sm md:text-base'
+                onClick={handleGuest}
+              >
                 As Guest
               </Button>
             </>

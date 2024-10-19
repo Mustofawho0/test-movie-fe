@@ -22,7 +22,7 @@ export default function Carousel() {
     slidesToScroll: 1,
   };
   return (
-    <div className='relative max-w-screen-2xl mx-auto py-1'>
+    <div className='relative fhd:max-w-screen-xxl lg:max-w-screen-xl mx-auto py-1 px-2'>
       <Slider {...settings}>
         {movie.slice(0, 5).map((m, i: number) => (
           <div key={i} className='relative w-full'>
@@ -33,7 +33,7 @@ export default function Carousel() {
               height={10000}
               priority={true}
               quality={100}
-              className='h-[750px] rounded-lg w-full'
+              className='lg:h-[700px] xl:h-[750px] rounded-lg w-full mobile:h-[500px] h-[500px]'
             />
           </div>
         ))}

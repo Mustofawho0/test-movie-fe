@@ -76,3 +76,56 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.loader {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  line-height: 1.2em;
+  display: inline-grid;
+}
+.loader:before,
+.loader:after {
+  content:"Loading...";
+  grid-area: 1/1;
+  -webkit-mask: linear-gradient(90deg,#000 50%,#0000 0) 0 50%/2ch 100%;
+  color: #0000;
+  text-shadow: 0 0 0 #000,0 calc(var(--s,1)*1.2em) 0 #000;
+  animation: l15 1s infinite;
+}
+.loader:after {
+  -webkit-mask-position: 1ch 50%;
+  --s:-1;
+}
+@keyframes l15 {80%,100%{text-shadow:0 calc(var(--s,1)*-1.2em)  0 #000,0 0 0 #000}}
+
+
+.loaderbar {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#000 0 0);
+  background: 
+    var(--c) 0%   100%,
+    var(--c) 50%  100%,
+    var(--c) 100% 100%;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+  0%  {background-size: 20% 100%,20% 100%,20% 100%}
+  20% {background-size: 20% 60% ,20% 100%,20% 100%}
+  40% {background-size: 20% 80% ,20% 60% ,20% 100%}
+  60% {background-size: 20% 100%,20% 80% ,20% 60% }
+  80% {background-size: 20% 100%,20% 100%,20% 80% }
+  100%{background-size: 20% 100%,20% 100%,20% 100%}
+}
+
+
+.loaderspin {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #000 #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {to{transform: rotate(.5turn)}}

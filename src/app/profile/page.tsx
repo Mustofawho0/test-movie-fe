@@ -2,13 +2,19 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { useGetListFavoriteMovie } from '@/api/useGetListFavoriteMovie';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
+import LoadingSpin from '@/components/loader/spin';
 
 export default function ProfilPage() {
+  const [isLoading, setIsLoading] = React.useState(true);
   const { handleListFavoriteMovie, list } = useGetListFavoriteMovie();
 
   React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
     handleListFavoriteMovie();
+    return () => clearTimeout(timer);
   }, [handleListFavoriteMovie]);
 
   return (
@@ -16,10 +22,17 @@ export default function ProfilPage() {
       <h1 className='font-semibold tracking-wide text-2xl pt-5'>
         Favorite Movie 🎞️
       </h1>
-      {list && list.length > 0 ? (
-        <div className='grid grid-cols-4 gap-4 py-5'>
+      {isLoading ? (
+        <div className='flex items-center justify-center min-h-screen'>
+          <LoadingSpin />
+        </div>
+      ) : list && list.length > 0 ? (
+        <div className='grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-5 md:px-2'>
           {list.map((item) => (
-            <Card className='w-[300px] flex-shrink-0 py-2' key={item.id}>
+            <Card
+              className='xl:w-[300px] w-[300px] md:w-[240px] flex-shrink-0 py-2'
+              key={item.id}
+            >
               <CardContent>
                 <Image
                   src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
