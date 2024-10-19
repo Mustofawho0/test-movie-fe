@@ -58,6 +58,14 @@ pnpm install
 - Languages : Typescript
 - Add Library : Axios, Antd, Licide-react, Shadcn/ui, React-slick, Sweetalert2
 
+## Features
+
+- User can login with account [https://www.themoviedb.org/](TMDB)
+- User can login with guest account but cannot add to favorite movie
+- User can add to favorite movie after login with account
+- User can see list favorite movie, click on account
+- Add pagination for popular movie
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
